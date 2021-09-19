@@ -27,7 +27,7 @@ node {
                 //bat(script: 'az aks get-credentials --resource-group aforo255Devops --name aforo255jenkins & kubectl config get-contexts --kubeconfig=%KUBE_PATH_CONFIG%', returnStdout: true);
                 bat(script: 'az aks get-credentials --resource-group  resposDevOps --name clusterDevOps & kubectl config get-contexts --kubeconfig=C:/Users/Home/.kube/config', returnStdout: true);
                 bat(script: 'kubectl config use-context clusterDevOps --kubeconfig=C:/Users/Home/.kube/config', returnStdout: true);
-                bat(script: 'Kubectl delete --all pods --kubeconfig=C:/Users/Home/.kube/config & kubectl apply -f k8s.yml --kubeconfig=C:/Users/Home/.kube\config', returnStdout: true);
+                bat(script: 'Kubectl delete --all pods --kubeconfig=C:/Users/Home/.kube/config & kubectl apply -f k8s.yml --kubeconfig=C:/Users/Home/.kube/config', returnStdout: true);
             }
         }    
     }
