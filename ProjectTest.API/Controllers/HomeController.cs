@@ -18,7 +18,7 @@ namespace ProjectTest.API.Controllers
         public string Get()
         {
             _logger.LogInformation("Initial Home Get");
-            return "Net Core 5.0 Running ... 08072021-v1.0.0 JENKINS AFORO255 18 Septiembre v3";
+            return "Net Core 5.0 Running ... 2021-09-19-v1.0.0 JENKINS Jhon Guzman v1";
         }
     }
 }
