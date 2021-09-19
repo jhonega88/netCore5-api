@@ -3,13 +3,13 @@ import groovy.json.JsonSlurper
 node {
     ws('netcore') {
         stage('SCM') {
-            git branch: 'main', url: 'https://github.com/Stywar/netcore50-api-test'           
+            git branch: 'main', url: 'https://github.com/jhonega88/netCore5-api.git'
         }
         stage('Build') {
             dotnet_build();
         }
         stage('Docker') {
-              bat(script: 'docker login --username %UsernameDockerHub% --password %PasswordDocker%', returnStdout: true);
+              bat(script: 'docker login --username jhonega88 --password JhonJhon2', returnStdout: true);
               bat(script: 'docker build -t antony0618/servicenet5 .', returnStdout: true);
               bat(script: 'docker push antony0618/servicenet5', returnStdout: true);            
         }
